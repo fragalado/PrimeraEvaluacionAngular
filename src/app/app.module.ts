@@ -7,13 +7,15 @@ import { AsignaturasComponent } from './vistas/asignaturas/asignaturas.component
 import { PreguntasComponent } from './vistas/preguntas/preguntas.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
+import { PreguntasDetallesComponent } from './vistas/preguntas-detalles/preguntas-detalles.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CabeceraComponent,
     AsignaturasComponent,
-    PreguntasComponent
+    PreguntasComponent,
+    PreguntasDetallesComponent,
   ],
   imports: [
     BrowserModule,

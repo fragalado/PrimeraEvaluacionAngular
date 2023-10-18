@@ -3,20 +3,21 @@
         <button  type="button" class="btn btn-primary botones" routerLink="">Volver</button>
     </div>
     <div class="col-10"></div>
-    <div class="col-8 border border-success border-2">
+    <div class="col-8 border border-success border-2" style="margin-top: 20px;">
         <div class="text-center" style="margin-top: 10px;"> <h4>Preguntas</h4> </div>
-        <div class="row border" style="padding: 8px; margin: 3px;" *ngFor="let pregunta of preguntas">
+        <div class="row border" style="padding: 8px; margin: 3px;" *ngFor="let pregunta of preguntas" (click)="preguntaActiva(pregunta)">
             <div class="col-12">
                 <div class="row">
                     <div class="col-12">
                         <p><b>{{pregunta.pregunta}}</b></p>
                     </div>
-                    <div class="col-12">
-                        <p>{{pregunta.respuesta}}</p>
-                    </div>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="col border border-primary border-2" style="margin-top: 20px; padding: 10px; margin-left: 7px;" *ngIf="pregunta">
+        <app-preguntas-detalles [pregunta]="pregunta"></app-preguntas-detalles>
     </div>
 </div>
 
